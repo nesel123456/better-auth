@@ -1,6 +1,6 @@
 import * as http from 'http';
 import { IncomingHttpHeaders } from 'http';
-import { n as Auth } from '../shared/better-auth.XM7lsWMa.mjs';
+import { n as Auth } from '../shared/better-auth.Uh0QnYa5.mjs';
 import 'kysely';
 import 'better-call';
 import 'zod/v4';

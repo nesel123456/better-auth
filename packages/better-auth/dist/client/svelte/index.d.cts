@@ -4,9 +4,9 @@ export * from 'nanostores';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.C9DAFPr9.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.CFfxDFQ-.cjs';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.BDR52Rf2.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.CAmMIfb2.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BPYY3Yk-.cjs';
 import 'better-call';
 import 'kysely';
 import 'zod/v4';
@@ -25,15 +25,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         data: InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
-            data: infer S;
-            error: null;
-        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
+        } | {
+            data: infer S;
+            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never;
         error: BetterFetchError | null;
         isPending: boolean;
@@ -113,15 +113,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         Session: NonNullable<InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
-            data: infer S;
-            error: null;
-        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
+        } | {
+            data: infer S;
+            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never>;
     };
     $ERROR_CODES: PrettifyDeep<InferErrorCodes<Option> & typeof BASE_ERROR_CODES>;

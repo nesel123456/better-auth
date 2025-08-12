@@ -4,9 +4,9 @@ import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
 import { DeepReadonly, Ref } from 'vue';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.BNbnQqTc.js';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.ya4FgqdS.js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.BDR52Rf2.js';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.2KSwrHCN.js';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.DbSL2wGY.js';
 import 'better-call';
 import 'kysely';
 import 'zod/v4';
@@ -26,15 +26,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
             data: InferClientAPI<Option> extends {
                 getSession: () => Promise<infer Res>;
             } ? Res extends {
+                data: infer S;
+                error: null;
+            } | {
                 data: null;
                 error: {
                     message?: string | undefined;
                     status: number;
                     statusText: string;
                 };
-            } | {
-                data: infer S;
-                error: null;
             } ? S : Res extends Record<string, any> ? Res : never : never;
             isPending: boolean;
             isRefetching: boolean;
@@ -44,15 +44,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
             data: Ref<InferClientAPI<Option> extends {
                 getSession: () => Promise<infer Res>;
             } ? Res extends {
+                data: infer S;
+                error: null;
+            } | {
                 data: null;
                 error: {
                     message?: string | undefined;
                     status: number;
                     statusText: string;
                 };
-            } | {
-                data: infer S;
-                error: null;
             } ? S : Res extends Record<string, any> ? Res : never : never>;
             isPending: false;
             error: Ref<{
@@ -66,15 +66,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         Session: NonNullable<InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
+            data: infer S;
+            error: null;
+        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
-        } | {
-            data: infer S;
-            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never>;
     };
     $fetch: _better_fetch_fetch.BetterFetch<{

@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { H as HookEndpointContext } from '../../shared/better-auth.2KSwrHCN.js';
+import { H as HookEndpointContext } from '../../shared/better-auth.DbSL2wGY.js';
 import 'kysely';
 import 'zod/v4';
 import '../../shared/better-auth.BDR52Rf2.js';

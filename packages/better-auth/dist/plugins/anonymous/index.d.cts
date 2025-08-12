@@ -1,4 +1,4 @@
-import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.CAmMIfb2.cjs';
+import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.BPYY3Yk-.cjs';
 import * as better_call from 'better-call';
 import { EndpointContext } from 'better-call';
 import 'kysely';

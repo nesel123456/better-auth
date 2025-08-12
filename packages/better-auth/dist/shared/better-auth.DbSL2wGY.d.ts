@@ -407,7 +407,6 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
     };
     returned?: boolean;
     required?: boolean;
-    defaultValue?: Primitive | (() => Primitive);
     references?: {
         /**
          * The model to reference.
@@ -423,6 +422,7 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
          */
         onDelete?: "no action" | "restrict" | "cascade" | "set null" | "set default";
     };
+    defaultValue?: Primitive | (() => Primitive);
     unique?: boolean;
     validator?: {
         input?: ZodSchema;

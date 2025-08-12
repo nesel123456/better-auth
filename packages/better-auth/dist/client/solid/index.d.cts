@@ -1,10 +1,10 @@
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.C9DAFPr9.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.CFfxDFQ-.cjs';
 import { Accessor } from 'solid-js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.BDR52Rf2.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.CAmMIfb2.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BPYY3Yk-.cjs';
 export * from 'nanostores';
 import 'better-call';
 import 'kysely';

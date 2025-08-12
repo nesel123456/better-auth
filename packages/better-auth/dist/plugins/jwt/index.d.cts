@@ -1,4 +1,4 @@
-import { G as GenericEndpointContext, U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.CAmMIfb2.cjs';
+import { G as GenericEndpointContext, U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.BPYY3Yk-.cjs';
 import * as better_call from 'better-call';
 import { JWK } from 'jose';
 import 'kysely';
