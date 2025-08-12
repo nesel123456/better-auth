@@ -1,10 +1,10 @@
 import { AccessControl, Role, Statements } from '../access/index.cjs';
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.D6QKfRiw.cjs';
+import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.BA5VIuwi.cjs';
 import '../../shared/better-auth.BDR52Rf2.cjs';
 import 'kysely';
-import '../../shared/better-auth.DeahYwp5.cjs';
+import '../../shared/better-auth.DSvLrleU.cjs';
 import 'jose';
 import 'zod/v4/core';
 import 'zod';
@@ -445,7 +445,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
             } & {
                 query: {
                     searchValue?: string | undefined;
-                    searchField?: "name" | "email" | undefined;
+                    searchField?: "email" | "name" | undefined;
                     searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
@@ -500,8 +500,8 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                 query: z.ZodObject<{
                     searchValue: z.ZodOptional<z.ZodString>;
                     searchField: z.ZodOptional<z.ZodEnum<{
-                        name: "name";
                         email: "email";
+                        name: "name";
                     }>>;
                     searchOperator: z.ZodOptional<z.ZodEnum<{
                         contains: "contains";

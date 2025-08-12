@@ -1,10 +1,10 @@
 import * as better_call from 'better-call';
-import { B as BetterAuthOptions } from '../shared/better-auth.8PpFFKTa.mjs';
+import { B as BetterAuthOptions } from '../shared/better-auth.QwiX43wb.mjs';
 import { RequestEvent } from '@sveltejs/kit';
 import 'kysely';
 import 'zod/v4';
 import '../shared/better-auth.BDR52Rf2.mjs';
-import '../shared/better-auth.ACwZgLRi.mjs';
+import '../shared/better-auth.BFod4hxi.mjs';
 import 'jose';
 import 'zod/v4/core';
 import 'zod';
