@@ -177,13 +177,18 @@ export const createInvitation = <O extends OrganizationOptions>(option: O) => {
 				userId: session.user.id,
 				organizationId: organizationId,
 			});
-			if (!member) {
-				throw new APIError("BAD_REQUEST", {
-					message: ORGANIZATION_ERROR_CODES.MEMBER_NOT_FOUND,
-				});
-			}
+
+			const safeMember = member ?? {
+    			id: "",
+   				organizationId: organizationId,
+    			userId: session.user.id,
+   				role: "member",
+    			createdAt: new Date(),
+    			user: session.user, 
+			};
+		
 			const canInvite = hasPermission({
-				role: member.role,
+				role: safeMember.role,
 				options: ctx.context.orgOptions,
 				permissions: {
 					invitation: ["create"],
@@ -201,7 +206,7 @@ export const createInvitation = <O extends OrganizationOptions>(option: O) => {
 			const roles = parseRoles(ctx.body.role as string | string[]);
 
 			if (
-				member.role !== creatorRole &&
+				member?.role !== creatorRole &&
 				roles.split(",").includes(creatorRole)
 			) {
 				throw new APIError("FORBIDDEN", {
@@ -252,7 +257,7 @@ export const createInvitation = <O extends OrganizationOptions>(option: O) => {
 							{
 								user: session.user,
 								organization,
-								member: member,
+								member: safeMember,
 							},
 							ctx.context,
 						)
@@ -344,7 +349,7 @@ export const createInvitation = <O extends OrganizationOptions>(option: O) => {
 					email: invitation.email.toLowerCase(),
 					organization: organization,
 					inviter: {
-						...member,
+						...safeMember,
 						user: session.user,
 					},
 					//@ts-expect-error
@@ -660,13 +665,18 @@ export const cancelInvitation = <O extends OrganizationOptions>(options: O) =>
 				userId: session.user.id,
 				organizationId: invitation.organizationId,
 			});
-			if (!member) {
-				throw new APIError("BAD_REQUEST", {
-					message: ORGANIZATION_ERROR_CODES.MEMBER_NOT_FOUND,
-				});
-			}
+
+			const safeMember = member ?? {
+    			id: "",
+    			organizationId: invitation.organizationId,
+    			userId: session.user.id,
+    			role: "member",
+    			createdAt: new Date(),
+    			user: session.user,
+			};
+			
 			const canCancel = hasPermission({
-				role: member.role,
+				role: safeMember.role,
 				options: ctx.context.orgOptions,
 				permissions: {
 					invitation: ["cancel"],
@@ -796,18 +806,13 @@ export const getInvitation = <O extends OrganizationOptions>(options: O) =>
 				userId: invitation.inviterId,
 				organizationId: invitation.organizationId,
 			});
-			if (!member) {
-				throw new APIError("BAD_REQUEST", {
-					message:
-						ORGANIZATION_ERROR_CODES.INVITER_IS_NO_LONGER_A_MEMBER_OF_THE_ORGANIZATION,
-				});
-			}
+			
 
 			return ctx.json({
 				...invitation,
 				organizationName: organization.name,
 				organizationSlug: organization.slug,
-				inviterEmail: member.user.email,
+				inviterEmail: member?.user.email ?? "",
 			});
 		},
 	);
