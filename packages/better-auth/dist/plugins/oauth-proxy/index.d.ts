@@ -1,4 +1,4 @@
-import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.DqDqyS0R.js';
+import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.ChxO8ABL.js';
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
 import 'kysely';

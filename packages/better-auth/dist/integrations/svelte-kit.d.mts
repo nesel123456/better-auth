@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { B as BetterAuthOptions } from '../shared/better-auth.8PpFFKTa.mjs';
+import { B as BetterAuthOptions } from '../shared/better-auth.4akHLOSb.mjs';
 import { RequestEvent } from '@sveltejs/kit';
 import 'kysely';
 import 'zod/v4';

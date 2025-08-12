@@ -1,4 +1,4 @@
-import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.DqDqyS0R.js';
+import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.ChxO8ABL.js';
 import { Db } from 'mongodb';
 import 'kysely';
 import 'better-call';

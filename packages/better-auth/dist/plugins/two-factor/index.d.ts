@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.DqDqyS0R.js';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.ChxO8ABL.js';
 import { L as LiteralString } from '../../shared/better-auth.BDR52Rf2.js';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import 'kysely';

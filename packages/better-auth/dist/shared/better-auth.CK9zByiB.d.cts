@@ -3,8 +3,8 @@ import * as better_call from 'better-call';
 import { EndpointContext, InputContext, CookieOptions, Endpoint, Middleware } from 'better-call';
 import * as z from 'zod/v4';
 import { ZodSchema } from 'zod/v4';
-import { b as LiteralUnion, L as LiteralString, D as DeepPartial, U as UnionToIntersection, S as StripEmptyObjects, a as Prettify, O as OmitId, P as PrettifyDeep, E as Expand } from './better-auth.BDR52Rf2.mjs';
-import { a as OAuthProvider, S as SocialProviders, b as SocialProviderList, O as OAuth2Tokens } from './better-auth.ACwZgLRi.mjs';
+import { b as LiteralUnion, L as LiteralString, D as DeepPartial, U as UnionToIntersection, S as StripEmptyObjects, a as Prettify, O as OmitId, P as PrettifyDeep, E as Expand } from './better-auth.BDR52Rf2.cjs';
+import { a as OAuthProvider, S as SocialProviders, b as SocialProviderList, O as OAuth2Tokens } from './better-auth.DeahYwp5.cjs';
 import * as zod_v4_core from 'zod/v4/core';
 import * as zod from 'zod';
 import { Database } from 'better-sqlite3';
@@ -407,7 +407,6 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
     };
     returned?: boolean;
     required?: boolean;
-    defaultValue?: Primitive | (() => Primitive);
     references?: {
         /**
          * The model to reference.
@@ -423,6 +422,7 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
          */
         onDelete?: "no action" | "restrict" | "cascade" | "set null" | "set default";
     };
+    defaultValue?: Primitive | (() => Primitive);
     unique?: boolean;
     validator?: {
         input?: ZodSchema;

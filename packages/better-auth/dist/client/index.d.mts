@@ -1,9 +1,9 @@
-import { f as BASE_ERROR_CODES, h as BetterAuthPlugin, B as BetterAuthOptions } from '../shared/better-auth.8PpFFKTa.mjs';
+import { f as BASE_ERROR_CODES, h as BetterAuthPlugin, B as BetterAuthOptions } from '../shared/better-auth.4akHLOSb.mjs';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError, BetterFetch, BetterFetchOption } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../shared/better-auth.C15tnkUi.mjs';
-export { A as AtomListener, h as InferAdditionalFromClient, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, S as Store } from '../shared/better-auth.C15tnkUi.mjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../shared/better-auth.wA0LHqYr.mjs';
+export { A as AtomListener, h as InferAdditionalFromClient, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, S as Store } from '../shared/better-auth.wA0LHqYr.mjs';
 import * as nanostores from 'nanostores';
 import { Atom, PreinitializedWritableAtom } from 'nanostores';
 export * from 'nanostores';

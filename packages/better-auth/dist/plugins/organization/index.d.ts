@@ -1,5 +1,5 @@
 import * as z from 'zod/v4';
-import { U as User, S as Session, p as AuthContext, J as FieldAttribute, ai as InferAdditionalFieldsFromPluginOptions, G as GenericEndpointContext } from '../../shared/better-auth.DqDqyS0R.js';
+import { U as User, S as Session, p as AuthContext, J as FieldAttribute, ai as InferAdditionalFieldsFromPluginOptions, G as GenericEndpointContext } from '../../shared/better-auth.ChxO8ABL.js';
 import { AccessControl, Role, Statements } from '../access/index.js';
 import * as better_call from 'better-call';
 import { Prettify } from 'better-call';

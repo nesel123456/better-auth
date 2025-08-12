@@ -1,5 +1,5 @@
 import { Kysely } from 'kysely';
-import { B as BetterAuthOptions, K as KyselyDatabaseType, A as AdapterDebugLogs, a as Adapter } from '../../shared/better-auth.DqDqyS0R.js';
+import { B as BetterAuthOptions, K as KyselyDatabaseType, A as AdapterDebugLogs, a as Adapter } from '../../shared/better-auth.ChxO8ABL.js';
 import 'better-call';
 import 'zod/v4';
 import '../../shared/better-auth.BDR52Rf2.js';

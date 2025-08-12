@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { O as OAuth2Tokens, a as OAuthProvider, P as ProviderOptions } from '../../shared/better-auth.DeahYwp5.cjs';
-import { U as User, p as AuthContext } from '../../shared/better-auth.D6QKfRiw.cjs';
+import { U as User, p as AuthContext } from '../../shared/better-auth.CK9zByiB.cjs';
 import * as z from 'zod/v4';
 import '../../shared/better-auth.BDR52Rf2.cjs';
 import 'jose';

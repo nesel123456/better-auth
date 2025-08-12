@@ -1,4 +1,4 @@
-import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.D6QKfRiw.cjs';
+import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.CK9zByiB.cjs';
 import 'kysely';
 import 'better-call';
 import 'zod/v4';

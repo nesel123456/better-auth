@@ -1,8 +1,8 @@
-import { B as BetterAuthOptions, T as TelemetryContext, E as TelemetryEvent, J as FieldAttribute, M as Models } from './shared/better-auth.DqDqyS0R.js';
-export { O as Account, a as Adapter, Y as AdapterInstance, X as AdapterSchemaCreation, N as AdditionalSessionFieldsInput, u as AdditionalSessionFieldsOutput, y as AdditionalUserFieldsInput, v as AdditionalUserFieldsOutput, n as Auth, p as AuthContext, g as AuthPluginSchema, h as BetterAuthPlugin, F as FilterActions, _ as FilteredAPI, G as GenericEndpointContext, H as HookEndpointContext, t as InferAPI, I as InferOptionSchema, i as InferPluginErrorCodes, z as InferPluginTypes, r as InferSession, $ as InferSessionAPI, q as InferUser, a5 as InternalLogger, a4 as LogHandlerParams, a0 as LogLevel, a3 as Logger, R as RateLimit, Z as SecondaryStorage, S as Session, U as User, V as Verification, Q as Where, W as WithJsDoc, L as betterAuth, a6 as createLogger, P as init, a1 as levels, a7 as logger, a2 as shouldPublishLog } from './shared/better-auth.DqDqyS0R.js';
-export { A as AtomListener, B as BetterAuthClientPlugin, C as ClientOptions, b as InferActions, h as InferAdditionalFromClient, a as InferClientAPI, c as InferErrorCodes, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, I as IsSignal, S as Store } from './shared/better-auth.CqKnkEHB.js';
+import { B as BetterAuthOptions, T as TelemetryContext, E as TelemetryEvent, J as FieldAttribute, M as Models } from './shared/better-auth.ChxO8ABL.js';
+export { O as Account, a as Adapter, Y as AdapterInstance, X as AdapterSchemaCreation, N as AdditionalSessionFieldsInput, u as AdditionalSessionFieldsOutput, y as AdditionalUserFieldsInput, v as AdditionalUserFieldsOutput, n as Auth, p as AuthContext, g as AuthPluginSchema, h as BetterAuthPlugin, F as FilterActions, _ as FilteredAPI, G as GenericEndpointContext, H as HookEndpointContext, t as InferAPI, I as InferOptionSchema, i as InferPluginErrorCodes, z as InferPluginTypes, r as InferSession, $ as InferSessionAPI, q as InferUser, a5 as InternalLogger, a4 as LogHandlerParams, a0 as LogLevel, a3 as Logger, R as RateLimit, Z as SecondaryStorage, S as Session, U as User, V as Verification, Q as Where, W as WithJsDoc, L as betterAuth, a6 as createLogger, P as init, a1 as levels, a7 as logger, a2 as shouldPublishLog } from './shared/better-auth.ChxO8ABL.js';
+export { A as AtomListener, B as BetterAuthClientPlugin, C as ClientOptions, b as InferActions, h as InferAdditionalFromClient, a as InferClientAPI, c as InferErrorCodes, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, I as IsSignal, S as Store } from './shared/better-auth.C7q7R-Jo.js';
 export { H as HIDE_METADATA } from './shared/better-auth.DEHJp1rk.js';
-export { g as generateState, p as parseState } from './shared/better-auth.BI4eTOeO.js';
+export { g as generateState, p as parseState } from './shared/better-auth.eerKu-FW.js';
 export * from 'better-call';
 export * from 'zod/v4';
 export * from 'zod/v4/core';
@@ -123,7 +123,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
     };
     account: {
         modelName: string | undefined;
-        fields: Partial<Record<"scope" | "userId" | "createdAt" | "updatedAt" | "providerId" | "accountId" | "accessToken" | "refreshToken" | "idToken" | "accessTokenExpiresAt" | "refreshTokenExpiresAt" | "password", string>> | undefined;
+        fields: Partial<Record<"scope" | "userId" | "createdAt" | "updatedAt" | "idToken" | "accessToken" | "refreshToken" | "providerId" | "accountId" | "accessTokenExpiresAt" | "refreshTokenExpiresAt" | "password", string>> | undefined;
         encryptOAuthTokens: boolean | undefined;
         updateAccountOnSignIn: boolean | undefined;
         accountLinking: {

@@ -1,4 +1,4 @@
-import { B as BetterAuthOptions, a as Adapter } from '../shared/better-auth.DqDqyS0R.js';
+import { B as BetterAuthOptions, a as Adapter } from '../shared/better-auth.ChxO8ABL.js';
 import 'kysely';
 import 'better-call';
 import 'zod/v4';

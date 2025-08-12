@@ -1,7 +1,7 @@
 import { AccessControl, Role, Statements } from '../access/index.cjs';
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.D6QKfRiw.cjs';
+import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.CK9zByiB.cjs';
 import '../../shared/better-auth.BDR52Rf2.cjs';
 import 'kysely';
 import '../../shared/better-auth.DeahYwp5.cjs';
