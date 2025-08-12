@@ -1,10 +1,10 @@
-import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.nHRig-F9.js';
+import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.DqDqyS0R.js';
 import * as better_call from 'better-call';
 import { EndpointContext } from 'better-call';
 import 'kysely';
 import 'zod/v4';
 import '../../shared/better-auth.BDR52Rf2.js';
-import '../../shared/better-auth.B-pjewPT.js';
+import '../../shared/better-auth.DbvnSV1O.js';
 import 'jose';
 import 'zod/v4/core';
 import 'zod';

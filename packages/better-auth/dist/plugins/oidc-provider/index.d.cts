@@ -1,9 +1,9 @@
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.BA5VIuwi.cjs';
+import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.D6QKfRiw.cjs';
 import 'kysely';
 import '../../shared/better-auth.BDR52Rf2.cjs';
-import '../../shared/better-auth.DSvLrleU.cjs';
+import '../../shared/better-auth.DeahYwp5.cjs';
 import 'jose';
 import 'zod/v4/core';
 import 'zod';
@@ -997,7 +997,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     redirect_uris: string[];
-                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
                     response_types?: ("token" | "code")[] | undefined;
                     client_name?: string | undefined;
@@ -1038,7 +1038,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     client_id_issued_at: number;
                     client_secret_expires_at: number;
                     redirect_uris: string[];
-                    token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
+                    token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
                     grant_types: string[];
                     response_types: string[];
                     client_name: string | undefined;
@@ -1061,7 +1061,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 client_id_issued_at: number;
                 client_secret_expires_at: number;
                 redirect_uris: string[];
-                token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
+                token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
                 grant_types: string[];
                 response_types: string[];
                 client_name: string | undefined;
@@ -1086,8 +1086,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     redirect_uris: z.ZodArray<z.ZodString>;
                     token_endpoint_auth_method: z.ZodOptional<z.ZodDefault<z.ZodEnum<{
                         none: "none";
-                        client_secret_basic: "client_secret_basic";
                         client_secret_post: "client_secret_post";
+                        client_secret_basic: "client_secret_basic";
                     }>>>;
                     grant_types: z.ZodOptional<z.ZodDefault<z.ZodArray<z.ZodEnum<{
                         password: "password";

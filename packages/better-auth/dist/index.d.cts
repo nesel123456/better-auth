@@ -1,14 +1,14 @@
-import { B as BetterAuthOptions, T as TelemetryContext, E as TelemetryEvent, J as FieldAttribute, M as Models } from './shared/better-auth.BA5VIuwi.cjs';
-export { O as Account, a as Adapter, Y as AdapterInstance, X as AdapterSchemaCreation, N as AdditionalSessionFieldsInput, u as AdditionalSessionFieldsOutput, y as AdditionalUserFieldsInput, v as AdditionalUserFieldsOutput, n as Auth, p as AuthContext, g as AuthPluginSchema, h as BetterAuthPlugin, F as FilterActions, _ as FilteredAPI, G as GenericEndpointContext, H as HookEndpointContext, t as InferAPI, I as InferOptionSchema, i as InferPluginErrorCodes, z as InferPluginTypes, r as InferSession, $ as InferSessionAPI, q as InferUser, a5 as InternalLogger, a4 as LogHandlerParams, a0 as LogLevel, a3 as Logger, R as RateLimit, Z as SecondaryStorage, S as Session, U as User, V as Verification, Q as Where, W as WithJsDoc, L as betterAuth, a6 as createLogger, P as init, a1 as levels, a7 as logger, a2 as shouldPublishLog } from './shared/better-auth.BA5VIuwi.cjs';
-export { A as AtomListener, B as BetterAuthClientPlugin, C as ClientOptions, b as InferActions, h as InferAdditionalFromClient, a as InferClientAPI, c as InferErrorCodes, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, I as IsSignal, S as Store } from './shared/better-auth.Flh6HfYx.cjs';
+import { B as BetterAuthOptions, T as TelemetryContext, E as TelemetryEvent, J as FieldAttribute, M as Models } from './shared/better-auth.D6QKfRiw.cjs';
+export { O as Account, a as Adapter, Y as AdapterInstance, X as AdapterSchemaCreation, N as AdditionalSessionFieldsInput, u as AdditionalSessionFieldsOutput, y as AdditionalUserFieldsInput, v as AdditionalUserFieldsOutput, n as Auth, p as AuthContext, g as AuthPluginSchema, h as BetterAuthPlugin, F as FilterActions, _ as FilteredAPI, G as GenericEndpointContext, H as HookEndpointContext, t as InferAPI, I as InferOptionSchema, i as InferPluginErrorCodes, z as InferPluginTypes, r as InferSession, $ as InferSessionAPI, q as InferUser, a5 as InternalLogger, a4 as LogHandlerParams, a0 as LogLevel, a3 as Logger, R as RateLimit, Z as SecondaryStorage, S as Session, U as User, V as Verification, Q as Where, W as WithJsDoc, L as betterAuth, a6 as createLogger, P as init, a1 as levels, a7 as logger, a2 as shouldPublishLog } from './shared/better-auth.D6QKfRiw.cjs';
+export { A as AtomListener, B as BetterAuthClientPlugin, C as ClientOptions, b as InferActions, h as InferAdditionalFromClient, a as InferClientAPI, c as InferErrorCodes, e as InferPluginsFromClient, f as InferSessionFromClient, g as InferUserFromClient, I as IsSignal, S as Store } from './shared/better-auth.B0iinyZt.cjs';
 export { H as HIDE_METADATA } from './shared/better-auth.DEHJp1rk.cjs';
-export { g as generateState, p as parseState } from './shared/better-auth.DFiKdfK6.cjs';
+export { g as generateState, p as parseState } from './shared/better-auth.-XwXu3Rl.cjs';
 export * from 'better-call';
 export * from 'zod/v4';
 export * from 'zod/v4/core';
 import { b as LiteralUnion } from './shared/better-auth.BDR52Rf2.cjs';
 export { D as DeepPartial, E as Expand, H as HasRequiredKeys, d as LiteralNumber, L as LiteralString, O as OmitId, e as PreserveJSDoc, a as Prettify, P as PrettifyDeep, c as Primitive, R as RequiredKeysOf, S as StripEmptyObjects, U as UnionToIntersection, W as WithoutEmpty } from './shared/better-auth.BDR52Rf2.cjs';
-export { O as OAuth2Tokens, a as OAuthProvider, P as ProviderOptions } from './shared/better-auth.DSvLrleU.cjs';
+export { O as OAuth2Tokens, a as OAuthProvider, P as ProviderOptions } from './shared/better-auth.DeahYwp5.cjs';
 import 'kysely';
 import 'zod';
 import 'better-sqlite3';
@@ -82,7 +82,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
         disableSignUp: boolean | undefined;
         getUserInfo: boolean;
         overrideUserInfoOnSignIn: boolean;
-        prompt: "none" | "select_account" | "consent" | "login" | "select_account+consent" | undefined;
+        prompt: "select_account" | "consent" | "login" | "none" | "select_account+consent" | undefined;
         verifyIdToken: boolean;
         scope: string[] | undefined;
         refreshAccessToken: boolean;
@@ -90,7 +90,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
     plugins: string[] | undefined;
     user: {
         modelName: string | undefined;
-        fields: Partial<Record<"createdAt" | "updatedAt" | "email" | "emailVerified" | "name" | "image", string>> | undefined;
+        fields: Partial<Record<"name" | "emailVerified" | "email" | "image" | "createdAt" | "updatedAt", string>> | undefined;
         additionalFields: {
             [key: string]: FieldAttribute;
         } | undefined;
@@ -115,7 +115,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
         };
         disableSessionRefresh: boolean | undefined;
         expiresIn: number | undefined;
-        fields: Partial<Record<"userId" | "expiresAt" | "createdAt" | "updatedAt" | "token" | "ipAddress" | "userAgent", string>> | undefined;
+        fields: Partial<Record<"token" | "userId" | "expiresAt" | "createdAt" | "updatedAt" | "ipAddress" | "userAgent", string>> | undefined;
         freshAge: number | undefined;
         preserveSessionInDatabase: boolean | undefined;
         storeSessionInDatabase: boolean | undefined;
@@ -123,7 +123,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
     };
     account: {
         modelName: string | undefined;
-        fields: Partial<Record<"userId" | "createdAt" | "updatedAt" | "scope" | "idToken" | "accessToken" | "refreshToken" | "providerId" | "accountId" | "accessTokenExpiresAt" | "refreshTokenExpiresAt" | "password", string>> | undefined;
+        fields: Partial<Record<"scope" | "userId" | "createdAt" | "updatedAt" | "providerId" | "accountId" | "accessToken" | "refreshToken" | "idToken" | "accessTokenExpiresAt" | "refreshTokenExpiresAt" | "password", string>> | undefined;
         encryptOAuthTokens: boolean | undefined;
         updateAccountOnSignIn: boolean | undefined;
         accountLinking: {
@@ -163,7 +163,7 @@ declare function getTelemetryAuthConfig(options: BetterAuthOptions, context?: Te
         cookieAttributes: {
             expires: Date | undefined;
             secure: boolean | undefined;
-            sameSite: "lax" | "Strict" | "Lax" | "None" | "strict" | "none" | undefined;
+            sameSite: "none" | "lax" | "Strict" | "Lax" | "None" | "strict" | undefined;
             domain: boolean;
             path: string | undefined;
             httpOnly: boolean | undefined;

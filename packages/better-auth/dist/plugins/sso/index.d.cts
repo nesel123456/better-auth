@@ -1,7 +1,7 @@
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { O as OAuth2Tokens } from '../../shared/better-auth.DSvLrleU.cjs';
-import { U as User } from '../../shared/better-auth.BA5VIuwi.cjs';
+import { O as OAuth2Tokens } from '../../shared/better-auth.DeahYwp5.cjs';
+import { U as User } from '../../shared/better-auth.D6QKfRiw.cjs';
 import '../../shared/better-auth.BDR52Rf2.cjs';
 import 'jose';
 import 'kysely';
@@ -97,7 +97,7 @@ declare const sso: (options?: SSOOptions) => {
                     authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     scopes?: string[] | undefined;
@@ -153,8 +153,8 @@ declare const sso: (options?: SSOOptions) => {
                     tokenEndpoint: z.ZodOptional<z.ZodString>;
                     userInfoEndpoint: z.ZodOptional<z.ZodString>;
                     tokenEndpointAuthentication: z.ZodOptional<z.ZodEnum<{
-                        client_secret_basic: "client_secret_basic";
                         client_secret_post: "client_secret_post";
+                        client_secret_basic: "client_secret_basic";
                     }>>;
                     jwksEndpoint: z.ZodOptional<z.ZodString>;
                     discoveryEndpoint: z.ZodOptional<z.ZodString>;
