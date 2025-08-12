@@ -3,8 +3,8 @@ import * as better_call from 'better-call';
 import { EndpointContext, InputContext, CookieOptions, Endpoint, Middleware } from 'better-call';
 import * as z from 'zod/v4';
 import { ZodSchema } from 'zod/v4';
-import { b as LiteralUnion, L as LiteralString, D as DeepPartial, U as UnionToIntersection, S as StripEmptyObjects, a as Prettify, O as OmitId, P as PrettifyDeep, E as Expand } from './better-auth.BDR52Rf2.mjs';
-import { a as OAuthProvider, S as SocialProviders, b as SocialProviderList, O as OAuth2Tokens } from './better-auth.ACwZgLRi.mjs';
+import { b as LiteralUnion, L as LiteralString, D as DeepPartial, U as UnionToIntersection, S as StripEmptyObjects, a as Prettify, O as OmitId, P as PrettifyDeep, E as Expand } from './better-auth.BDR52Rf2.js';
+import { a as OAuthProvider, S as SocialProviders, b as SocialProviderList, O as OAuth2Tokens } from './better-auth.DbvnSV1O.js';
 import * as zod_v4_core from 'zod/v4/core';
 import * as zod from 'zod';
 import { Database } from 'better-sqlite3';
@@ -407,6 +407,7 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
     };
     returned?: boolean;
     required?: boolean;
+    defaultValue?: Primitive | (() => Primitive);
     references?: {
         /**
          * The model to reference.
@@ -422,7 +423,6 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
          */
         onDelete?: "no action" | "restrict" | "cascade" | "set null" | "set default";
     };
-    defaultValue?: Primitive | (() => Primitive);
     unique?: boolean;
     validator?: {
         input?: ZodSchema;
@@ -6453,7 +6453,7 @@ declare function getEndpoints<C extends AuthContext, Option extends BetterAuthOp
                     user?: string | undefined;
                 } | undefined;
             } & {
-                method: "GET" | "POST";
+                method: "POST" | "GET";
             } & {
                 query?: {
                     code?: string | undefined;
@@ -6484,7 +6484,7 @@ declare function getEndpoints<C extends AuthContext, Option extends BetterAuthOp
                 response: void;
             } : void>;
             options: {
-                method: ("GET" | "POST")[];
+                method: ("POST" | "GET")[];
                 body: zod.ZodOptional<zod.ZodObject<{
                     code: zod.ZodOptional<zod.ZodString>;
                     error: zod.ZodOptional<zod.ZodString>;
@@ -10080,7 +10080,7 @@ declare const router: <C extends AuthContext, Option extends BetterAuthOptions>(
                     user?: string | undefined;
                 } | undefined;
             } & {
-                method: "GET" | "POST";
+                method: "POST" | "GET";
             } & {
                 query?: {
                     code?: string | undefined;
@@ -10111,7 +10111,7 @@ declare const router: <C extends AuthContext, Option extends BetterAuthOptions>(
                 response: void;
             } : void>;
             options: {
-                method: ("GET" | "POST")[];
+                method: ("POST" | "GET")[];
                 body: zod.ZodOptional<zod.ZodObject<{
                     code: zod.ZodOptional<zod.ZodString>;
                     error: zod.ZodOptional<zod.ZodString>;

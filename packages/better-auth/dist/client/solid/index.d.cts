@@ -1,10 +1,10 @@
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.CFfxDFQ-.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.B0iinyZt.cjs';
 import { Accessor } from 'solid-js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.BDR52Rf2.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BPYY3Yk-.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.D6QKfRiw.cjs';
 export * from 'nanostores';
 import 'better-call';
 import 'kysely';
@@ -70,13 +70,13 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
                 onSuccess(context: _better_fetch_fetch.SuccessContext<any>): void;
             };
         })[];
+        redirect?: RequestRedirect | undefined;
         method: string;
         headers?: (HeadersInit & (HeadersInit | {
             accept: "application/json" | "text/plain" | "application/octet-stream";
             "content-type": "application/json" | "text/plain" | "application/x-www-form-urlencoded" | "multipart/form-data" | "application/octet-stream";
             authorization: "Bearer" | "Basic";
         })) | undefined;
-        redirect?: RequestRedirect | undefined;
         cache?: RequestCache | undefined;
         credentials?: RequestCredentials;
         integrity?: string | undefined;

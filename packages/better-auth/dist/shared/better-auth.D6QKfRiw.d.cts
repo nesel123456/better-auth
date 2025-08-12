@@ -407,6 +407,7 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
     };
     returned?: boolean;
     required?: boolean;
+    defaultValue?: Primitive | (() => Primitive);
     references?: {
         /**
          * The model to reference.
@@ -422,7 +423,6 @@ declare const createFieldAttribute: <T extends FieldType, C extends Omit<FieldAt
          */
         onDelete?: "no action" | "restrict" | "cascade" | "set null" | "set default";
     };
-    defaultValue?: Primitive | (() => Primitive);
     unique?: boolean;
     validator?: {
         input?: ZodSchema;
@@ -6453,7 +6453,7 @@ declare function getEndpoints<C extends AuthContext, Option extends BetterAuthOp
                     user?: string | undefined;
                 } | undefined;
             } & {
-                method: "GET" | "POST";
+                method: "POST" | "GET";
             } & {
                 query?: {
                     code?: string | undefined;
@@ -6484,7 +6484,7 @@ declare function getEndpoints<C extends AuthContext, Option extends BetterAuthOp
                 response: void;
             } : void>;
             options: {
-                method: ("GET" | "POST")[];
+                method: ("POST" | "GET")[];
                 body: zod.ZodOptional<zod.ZodObject<{
                     code: zod.ZodOptional<zod.ZodString>;
                     error: zod.ZodOptional<zod.ZodString>;
@@ -10080,7 +10080,7 @@ declare const router: <C extends AuthContext, Option extends BetterAuthOptions>(
                     user?: string | undefined;
                 } | undefined;
             } & {
-                method: "GET" | "POST";
+                method: "POST" | "GET";
             } & {
                 query?: {
                     code?: string | undefined;
@@ -10111,7 +10111,7 @@ declare const router: <C extends AuthContext, Option extends BetterAuthOptions>(
                 response: void;
             } : void>;
             options: {
-                method: ("GET" | "POST")[];
+                method: ("POST" | "GET")[];
                 body: zod.ZodOptional<zod.ZodObject<{
                     code: zod.ZodOptional<zod.ZodString>;
                     error: zod.ZodOptional<zod.ZodString>;

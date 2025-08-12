@@ -1,7 +1,7 @@
 import { AccessControl, Role, Statements } from '../access/index.cjs';
 import * as better_call from 'better-call';
 import * as z from 'zod/v4';
-import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.BPYY3Yk-.cjs';
+import { I as InferOptionSchema, S as Session, U as User, G as GenericEndpointContext, H as HookEndpointContext } from '../../shared/better-auth.D6QKfRiw.cjs';
 import '../../shared/better-auth.BDR52Rf2.cjs';
 import 'kysely';
 import '../../shared/better-auth.DeahYwp5.cjs';
@@ -453,7 +453,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                 };
             } & {
                 params?: Record<string, any>;
@@ -518,9 +518,9 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     filterField: z.ZodOptional<z.ZodString>;
                     filterValue: z.ZodOptional<z.ZodUnion<[z.ZodUnion<[z.ZodString, z.ZodNumber]>, z.ZodBoolean]>>;
                     filterOperator: z.ZodOptional<z.ZodEnum<{
-                        lt: "lt";
                         eq: "eq";
                         ne: "ne";
+                        lt: "lt";
                         lte: "lte";
                         gt: "gt";
                         gte: "gte";

@@ -1,4 +1,4 @@
-import { G as GenericEndpointContext } from './better-auth.BPYY3Yk-.cjs';
+import { G as GenericEndpointContext } from './better-auth.8PpFFKTa.mjs';
 
 declare function generateState(c: GenericEndpointContext, link?: {
     email: string;

@@ -1,5 +1,5 @@
 import * as z from 'zod/v4';
-import { U as User, S as Session, p as AuthContext, J as FieldAttribute, ai as InferAdditionalFieldsFromPluginOptions, G as GenericEndpointContext } from '../../shared/better-auth.BPYY3Yk-.cjs';
+import { U as User, S as Session, p as AuthContext, J as FieldAttribute, ai as InferAdditionalFieldsFromPluginOptions, G as GenericEndpointContext } from '../../shared/better-auth.D6QKfRiw.cjs';
 import { AccessControl, Role, Statements } from '../access/index.cjs';
 import * as better_call from 'better-call';
 import { Prettify } from 'better-call';
@@ -5301,7 +5301,7 @@ declare const organization: <O extends OrganizationOptions>(options?: Organizati
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                     organizationId?: string | undefined;
                 } | undefined;
             } & {
@@ -5365,9 +5365,9 @@ declare const organization: <O extends OrganizationOptions>(options?: Organizati
                     filterField: z.ZodOptional<z.ZodString>;
                     filterValue: z.ZodOptional<z.ZodUnion<[z.ZodUnion<[z.ZodString, z.ZodNumber]>, z.ZodBoolean]>>;
                     filterOperator: z.ZodOptional<z.ZodEnum<{
-                        lt: "lt";
                         eq: "eq";
                         ne: "ne";
+                        lt: "lt";
                         lte: "lte";
                         gt: "gt";
                         gte: "gte";
@@ -8652,7 +8652,7 @@ declare const organization: <O extends OrganizationOptions>(options?: Organizati
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                     organizationId?: string | undefined;
                 } | undefined;
             } & {
@@ -8716,9 +8716,9 @@ declare const organization: <O extends OrganizationOptions>(options?: Organizati
                     filterField: z.ZodOptional<z.ZodString>;
                     filterValue: z.ZodOptional<z.ZodUnion<[z.ZodUnion<[z.ZodString, z.ZodNumber]>, z.ZodBoolean]>>;
                     filterOperator: z.ZodOptional<z.ZodEnum<{
-                        lt: "lt";
                         eq: "eq";
                         ne: "ne";
+                        lt: "lt";
                         lte: "lte";
                         gt: "gt";
                         gte: "gte";
